@@ -1,0 +1,5 @@
+DAX Measure:
+
+DC of Orders = DISTINCTCOUNT(Orders[Order ID])
+
+Rentention Rate = COUNTROWS(FILTER(GROUPBY(Orders,Orders[Customer ID]),[DC of Orders]>1))/DISTINCTCOUNT(Orders[Customer ID])
